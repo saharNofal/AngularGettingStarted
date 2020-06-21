@@ -6,6 +6,10 @@ import { Component } from '@angular/core';
   })
 export class ProductLstComponent{
 pageTitle : string = "ProducttList"; 
+imageWidth : number= 50;
+imageMargen:number=2;
+showImage : boolean = false;
+listFilter: string ='cart';
 products: any[]=[{
   "productId":"1",
  "productName":"garden_cart",
@@ -25,4 +29,8 @@ products: any[]=[{
   "starRating":"3.5",
   "imageUrl":"assets/images/hammer.png"
   }];
+
+  ToggelImage(): void {
+  this.showImage= ! this.showImage;
+  }
 }
