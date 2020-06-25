@@ -49,11 +49,15 @@ products: IProduct[]=[{
   "realeaseDate":"March 20,2019",
   "description":"hammer description",
   "price":10,
-  "starRating":3.5,
+  "starRating":2,
   "imageUrl":"assets/images/hammer.png"
   }];
 
   ToggelImage(): void {
   this.showImage= ! this.showImage;
+  }
+
+  onRatingClicked (message : string):void{
+    this.pageTitle= 'product list '+message;
   }
 }
